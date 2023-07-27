@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import nyu_logo from "./nyu_logo.jpg";
 
-/*fetching data from google sheets */
+/* fetching data from Google sheets */
 async function getData() {
   const spreadsheetId = '1KkIQ8lDtxTrRmFoAiMvmkL4fdFWpdUITnH_GSpkExDU';
   const response = await fetch(`https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json`);
@@ -27,11 +27,9 @@ async function searchBySecondColumn(searchValue) {
   });
   return matchingValues;
 
+
+
 }
-
-
-
-
 
 
 /*the App begins*/
@@ -45,7 +43,6 @@ function App() {
     const result = await searchBySecondColumn(searchValue);
     setSearchResult(result);
   };
-
 
 
   return (
@@ -110,12 +107,6 @@ function App() {
             </td>
           </tr>
         </table>
-        <df-messenger
-            intent="WELCOME"
-            chat-title="BotNAME"
-            agent-id="241f3b79-f2d1-42a7-b080-b730849631d9"
-            language-code="en"
-        ></df-messenger>
         <footer>
           <p>contacts</p>
         </footer>

@@ -129,3 +129,22 @@ table{
   height: 100px;
 
 }
+
+
+df-messenger {
+  --df-messenger-bot-message: #fff;
+  --df-messenger-button-titlebar-color: darkgreen;
+  --df-messenger-button-titlebar-font-color: #fff;
+  --df-messenger-chat-background-color: darkseagreen;
+  --df-messenger-font-color: rgba(0,0,0,.87);
+  --df-messenger-input-box-color: #fff;
+  --df-messenger-input-font-color: rgba(0,0,0,.87);
+  --df-messenger-input-placeholder-font-color: cornflowerblue;
+  --df-messenger-minimized-chat-close-icon-color: rgba(0,0,0,.87);
+  --df-messenger-send-icon: #42a5f5;
+  --df-messenger-user-message: gray;
+  --df-messenger-chip-color: #fff;
+  --df-messenger-chip-border-color: #e0e0e0;
+
+
+}
