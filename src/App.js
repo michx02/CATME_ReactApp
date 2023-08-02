@@ -35,14 +35,33 @@ async function searchBySecondColumn(searchValue) {
 /*the App begins*/
 function App() {
 
-  const [searchResult, setSearchResult] = useState('');
+  const [searchResult, setSearchResult] = useState([]);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const searchValue = event.target.name.value;
     const result = await searchBySecondColumn(searchValue);
     setSearchResult(result);
+
   };
+
+
+
+
+  let generateTable;
+
+  if (searchResult.length === 0) {
+    generateTable = <td colSpan={3}><p id='warning'>No Data to Display, Please enter the Project Group ID on the text-box above or use the chat-bot :)</p> </td>;
+  } else {
+    generateTable = searchResult.map((comment, index) => (
+        <tr key={index}>
+          <td></td>
+          <td>{comment}</td>
+          <td id={index}></td>
+        </tr>
+    ));
+  }
+
 
 
   return (
@@ -66,12 +85,16 @@ function App() {
             </tr>
           </table>
         </header>
+
+
         <nav>
             <form onSubmit={handleFormSubmit}>
               <label htmlFor="name">Project group ID:</label>
               <input type="text" id="name" name="name" required />
               <input type="submit" value="Analyze" />
             </form>
+
+
           <p id="students_alert">
             Not an Instructor? Visit the{' '}
             <a href="https://catme.org/login/index" title="CatMe Login page for students">
@@ -79,34 +102,35 @@ function App() {
             </a>
           </p>
         </nav>
-        <table>
-          <tr>
-            <td>
-              <main>
-                <table id="content_table">
-                  <tr>
-                    <td rowspan="2">
-                      <h3 id="title_peerEvals"></h3>
-                      <p id="peerEvals">{searchResult}</p>
-                    </td>
-                    <td>
-                      <h3 id="title_proEvals"></h3>
-                      <p id="proEvals"></p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src="" id="graphEvals" />
-                    </td>
-                  </tr>
-                </table>
-              </main>
-            </td>
-            <td id="aside">
 
-            </td>
-          </tr>
-        </table>
+        <div class='container'>
+        <main class='left-section'>
+
+          <table id='content_table' border= '1px' >
+            <tr>
+              <th> ID</th>
+              <th> Raw Comments</th>
+              <th> Processed Results</th>
+            </tr>
+
+            {generateTable}
+
+
+
+
+          </table>
+
+
+        </main>
+
+
+        <aside class='right-section'>
+
+
+        </aside>
+        </div>
+
+
         <footer>
           <p>contacts</p>
         </footer>
