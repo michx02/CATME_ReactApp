@@ -107,6 +107,10 @@ table{
   opacity: 0;
 }
 
+.aside_container {
+  min-height: 400px;
+}
+
 
 #header_table{
   width: 100%;

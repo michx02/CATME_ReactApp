@@ -36,26 +36,28 @@ async function searchBySecondColumn(searchValue) {
 function App() {
 
   const [searchResult, setSearchResult] = useState([]);
+  const [searchID, setSearchID] =useState('')
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const searchValue = event.target.name.value;
     const result = await searchBySecondColumn(searchValue);
+    setSearchID(searchValue)
     setSearchResult(result);
 
   };
 
-
+console.log(searchResult)
 
 
   let generateTable;
 
   if (searchResult.length === 0) {
-    generateTable = <td colSpan={3}><p id='warning'>No Data to Display, Please enter the Project Group ID on the text-box above or use the chat-bot :)</p> </td>;
+    generateTable = <td colSpan={3}><p id='warning'>No Data to Display, Please enter the Project Group ID on the text-box above or use the chat-bot</p> </td>;
   } else {
     generateTable = searchResult.map((comment, index) => (
         <tr key={index}>
-          <td></td>
+          <td>{searchID}</td>
           <td>{comment}</td>
           <td id={index}></td>
         </tr>
@@ -103,6 +105,8 @@ function App() {
           </p>
         </nav>
 
+
+
         <div class='container'>
         <main class='left-section'>
 
@@ -123,11 +127,11 @@ function App() {
 
         </main>
 
-
+        <div class='aside_container'>
         <aside class='right-section'>
 
-
         </aside>
+        </div>
         </div>
 
 
