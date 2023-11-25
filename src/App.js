@@ -1,5 +1,12 @@
 import React, {useState} from "react";
 import nyu_logo from "./nyu_logo.jpg";
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
+import { Data } from "./charts_resources/Data.js";
+import './App.css';
+import PieChart from './charts_resources/PieChart'
+
+Chart.register(CategoryScale);
 
 /* fetching data from Google sheets */
 async function getData() {
@@ -47,7 +54,6 @@ function App() {
 
   };
 
-console.log(searchResult)
 
 
   let generateTable;
@@ -62,8 +68,27 @@ console.log(searchResult)
           <td id={index}></td>
         </tr>
     ));
+
   }
 
+    /*Chart informtion*/
+    const [chartData, setChartData] = useState({
+        labels: Data.map((data) => data.category),
+        datasets: [
+            {
+                label: "Sentiment ",
+                data: Data.map((data) => data.Scope),
+                backgroundColor: [
+                    "rgba(75,192,92,1)", "#FF00FF",
+                    "#50AF95",
+                    "#f3ba2f",
+                    "#2a71d0"
+                ],
+                borderColor: "black",
+                borderWidth: 2
+            }
+        ]
+    });
 
 
   return (
@@ -124,11 +149,15 @@ console.log(searchResult)
 
           </table>
 
+            <PieChart chartData={chartData} />
 
         </main>
 
         <div class='aside_container'>
         <aside class='right-section'>
+            <div className="PieChart">
+                <PieChart chartData={chartData} />
+            </div>
 
         </aside>
         </div>
