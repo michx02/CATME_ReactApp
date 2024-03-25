@@ -2,42 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!--
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+          //To minimise the height of chatbox
+          $(document).ready(function() {
+            window.addEventListener('dfMessengerLoaded', function (event) {
+              $r1 = document.querySelector("df-messenger");
+              $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+              $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+              var sheet = new CSSStyleSheet;
+              // manage box height from here
+              sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 480px }`);
+              $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+            });
+          });
+        </script>
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      //To minimise the height of chatbox
-      $(document).ready(function() {
-        window.addEventListener('dfMessengerLoaded', function (event) {
-          $r1 = document.querySelector("df-messenger");
-          $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
-          $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
-          var sheet = new CSSStyleSheet;
-          // manage box height from here
-          sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 480px }`);
-          $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
-        });
-      });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link type="text/css" href="index.css">
-
-
-    <title>CatME</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <df-messenger
-            intent="WELCOME"
-            chat-title="CATME ChatBot"
-            agent-id="241f3b79-f2d1-42a7-b080-b730849631d9"
-            language-code="en"
-            chat-icon="https://i.imgur.com/GRdD4cW.png"
+        <link type="text/css" href="index.css">
 
 
-    ></df-messenger>
+        <title>CatME</title>
+      </head>
+      <body>
+        <div id="root"></div>
+         <!--
+        <df-messenger
+                intent="WELCOME"
+                chat-title="CATME ChatBot"
+                agent-id="241f3b79-f2d1-42a7-b080-b730849631d9"
+                language-code="en"
+                chat-icon="https://i.imgur.com/GRdD4cW.png"
 
 
+        ></df-messenger>
+
+    -->
   </body>
 </html>
