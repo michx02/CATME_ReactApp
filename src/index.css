@@ -244,10 +244,10 @@ df-messenger {
   justify-content: right;
   flex-grow: 0;
   flex-basis: 80%; /* Set the initial size of the large box to 80% of the container width */
-
 }
 
 .left_detail{
   justify-content: left;
   flex-grow: 0;
+  background-color: #82c68e;
 }
