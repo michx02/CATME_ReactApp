@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import catme_home from "./catme_home.jpg";
+import catmelogo_ from "./catmelogo_.png";
 
 const HomePage = () => {
     const [inputText, setInputText] = useState('');
@@ -17,7 +17,7 @@ const HomePage = () => {
             <div className="homepage">
 
                 <div className= "left_detail">
-                    <img alt="CATME logo" src={catme_home}/>
+                    <img alt="CATME logo" src={catmelogo_}/>
 
 
                 </div>
