@@ -1,8 +1,8 @@
 // src/components/AboutPage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PieChart from "./charts_resources/PieChart";
 import { useState } from 'react';
+import catme_home from "./catme_home.jpg";
 
 const HomePage = () => {
     const [inputText, setInputText] = useState('');
@@ -16,11 +16,16 @@ const HomePage = () => {
     return (
             <div className="homepage">
 
-                <Link to="/DetailPage">
-                    <button>Go to Detail Page</button>
-                </Link>
+                <div className= "left_detail">
+                    <img alt="CATME logo" src={catme_home}/>
+
+
+                </div>
+
+                <div className="right_detail">
 
                 <h1>Welcome to CatMe Chatbot</h1>
+
                 <div className="chat-container">
                     <div className="chat-box">
                         <div className="chat">
@@ -39,8 +44,18 @@ const HomePage = () => {
                             Send
                         </button>
                     </form>
+
                 </div>
+                    <div id='buttonToDetail'>
+                    <Link to="/DetailPage" >
+                        <button id="detailbutton">Go to Detail Page</button>
+                    </Link>
+                    </div>
             </div>
+
+            </div>
+
+
     );
 }
 
