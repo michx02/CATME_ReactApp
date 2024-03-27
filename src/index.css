@@ -185,17 +185,18 @@ df-messenger {
 }
 
 .chat-container {
-  flex-basis: 100%; /* Set the initial size of the large box to 100% of the container width */
+  flex-basis: 80%; /* Set the initial size of the large box to 100% of the container width */
 
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
-  height: 500px;
+  /*height: 500px;*/
 }
 
 .chat-box {
   height: 400px;
-  overflow-y: auto;
+  flex-basis: 80%;
+  /*overflow-y: auto;*/
   padding: 10px;
 }
 
@@ -243,11 +244,12 @@ df-messenger {
 .right_detail{
   justify-content: right;
   flex-grow: 0;
-  flex-basis: 80%; /* Set the initial size of the large box to 80% of the container width */
+  flex-basis: 80%;
+  background-color: #82c68e;
 }
 
 .left_detail{
   justify-content: left;
   flex-grow: 0;
-  background-color: #82c68e;
+  background-color: #2F4F4F;
 }
