@@ -16,9 +16,10 @@ const HomePage = () => {
     return (
             <div className="homepage">
 
-                <div className= "left_detail">
-                    <img alt="CATME logo" src={catmelogo_}/>
-
+                <div className= "left_detail"> 
+                <p>dashboard will be here</p>
+                {/* <img alt="CATME logo" src={catmelogo_}/> */}
+                
 
                 </div>
 
