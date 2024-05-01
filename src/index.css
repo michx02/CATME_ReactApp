@@ -80,10 +80,6 @@ table{
   margin: 0px;
 }
 
-h1{
-  color:blue
-}
-
 
 .container {
   display: grid;
@@ -91,26 +87,12 @@ h1{
   height: 100%;
 }
 
-.right-section {
+.left-section, .right-section {
   flex: 0;
   padding: 20px;
   flex-direction:column;
 }
 
-.left-section {
-  width: 300px;
-  height: 100vh;
-  background-color: #4caf50;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  max-width: 300px;
-  min-width:100px;
-  min-width: 100px;
-  z-index: 1000;
-  border: 1px solid #000;
-}
 .content {
   display: flex;
 }
@@ -204,20 +186,17 @@ df-messenger {
 
 .chat-container {
   flex-basis: 100%; /* Set the initial size of the large box to 100% of the container width */
+
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
-  height: 85%;
-  max-height: 85%;
-  justify-content: space-between;
-  
+  height: 500px;
 }
 
 .chat-box {
+  height: 400px;
   overflow-y: auto;
   padding: 10px;
-  flex-grow: 1;
-  
 }
 
 .chat {
@@ -230,13 +209,11 @@ df-messenger {
   border-radius: 5px;
   margin-left: auto;
   max-width: 70%;
-  flex-grow: 1;
-  
 }
 
 .input-form {
-  overflow-y: auto;
   display: flex;
+  align-items: center;
   padding: 10px;
 }
 
