@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import catmelogo_ from "./catmelogo_.png";
+import Dashboard from './Components/Dashboard';
 
 const HomePage = () => {
     const [inputText, setInputText] = useState('');
@@ -18,6 +19,14 @@ const HomePage = () => {
 
                 <div className= "left_detail"> 
                 <p>dashboard will be here</p>
+
+                <Dashboard/>
+                <Dashboard/>
+                <Dashboard/>
+                <Dashboard/>
+                
+    
+    
                 {/* <img alt="CATME logo" src={catmelogo_}/> */}
                 
 
