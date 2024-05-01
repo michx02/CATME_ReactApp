@@ -204,7 +204,6 @@ df-messenger {
 
 .chat-container {
   flex-basis: 100%; /* Set the initial size of the large box to 100% of the container width */
-
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
